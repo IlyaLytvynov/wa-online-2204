@@ -3,6 +3,5 @@ body {
   background: #efefef;
   font-family: 'Courier New', Courier, monospace;
   border: 2px solid red;
-  font-size: 50px;
-  color: red;
+  color: blue;
 }
