@@ -10,6 +10,7 @@ const baseConf = () => {
     lesson_4: ['./src/lesson_4/lesson_4.js'],
     lesson_5: ['./src/lesson_5/lesson_5.js'],
     lesson_6: ['./src/lesson_6/lesson_6.js'],
+    lesson_7: ['./src/lesson_7/lesson_7.js'],
     other_page: ['./src/other_page/other_page.js']
   };
 
