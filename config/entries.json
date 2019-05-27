@@ -16,5 +16,8 @@
   ],
   "lesson_9": [
     "./src/lesson_9/lesson_9.js"
+  ],
+  "lesson_10": [
+    "./src/lesson_10/lesson_10.js"
   ]
 }
