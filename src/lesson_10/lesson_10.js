@@ -17,19 +17,36 @@ function calculate() {
         alert('Please enter valid operands');
     } else {
         if (operator === '+') {
-            add();
+            print(add(a, b));
         } else if (operator === '-') {
-    
+            print(sub(a, b))
         } else if (operator === '*') {
-    
+            print(mul(a, b));
         } else if (operator === '/') {
-    
+            print(divide(a, b));
         } else {
             alert('Operator invalid!');
         }
     }
 
-    function add() {
-        console.log(Number(a) + Number(b));
+    // declaration
+    function add(operandA, operandB) {
+        return Number(operandA) + Number(operandB);
+    }
+
+    function sub(operandA, operandB) {
+        return Number(operandA) - Number(operandB);
+    }   
+
+    function mul(operandA, operandB) {
+        return Number(operandA) * Number(operandB);
+    }  
+
+    function divide(operandA, operandB) {
+        return Number(operandA) / Number(operandB);
+    }  
+
+    function print(dataToPrint) {
+        alert(dataToPrint);
     }
 }
