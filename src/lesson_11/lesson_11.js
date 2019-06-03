@@ -35,9 +35,7 @@ function textCreator(textBlock) {
     btn.onclick = openPrompt;
 }
 
-textCreator(document.querySelector('#textBlock1'))
-textCreator(document.querySelector('#textBlock2'))
-
-;
+textCreator(document.querySelector('#textBlock1'));
+textCreator(document.querySelector('#textBlock2'));
 switcher(document.querySelector('#testBtn3'));
 switcher(document.querySelector('#testBtn4'));
