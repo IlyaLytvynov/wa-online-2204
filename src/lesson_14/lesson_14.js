@@ -1,28 +1,61 @@
 import './lesson_14.scss';
-import { Lamp } from './scripts/lamp';
+import { Button, RoundButton } from './scripts/button';
 import { LampToggler } from './scripts/lampToggler';
 
-function greeting() {
-    console.log('THIS>>>', this);
-    console.log(this.name + ' ' + this.age);
+class Persone {
+    constructor(a, b, c) {
+        this.name = a;
+        this.firstName = b;
+        this.age = c;
+    }
+
+    say(phrase) {
+        console.log(this.name +':', phrase)
+    }
+
+    move() {
+        console.log(this.name +':', 'MOVE');
+    }
 }
 
-function User(a, b, c) {
-    this.name = a;
-    this.firstName = b;
-    this.age = c;
-    this.greet = greeting;
+class Developer extends Persone {
+    constructor(a, b, c, lang) {
+        super(a, b, c);
+        this.lang = lang;
+    }
+
+    code() {
+        console.log('I\'ve written some code on ' + this.lang);
+    }
 }
 
-const someUser = new User('Hello world', 'First test name', 10);
-const userJack = new User('Jack', 'Johns', 40);
-const userJohn = new User('John', 'Snow', 35);
+class BEDeveloper extends Developer {
+    constructor(a, b, c, lang, DBtype) {
+        super(a, b, c, lang);
+        this.DBtype = DBtype;
+    }
 
-const toggler = new LampToggler(document.querySelector('.lamps'));
-toggler.render();
+    developDataBase() {
+        console.log('Created DB' + this.DBtype);
+    }
+}
 
-const otherSimpleLamp = new Lamp(document.querySelector('.placeForOtherLamp'));
-otherSimpleLamp.render();
+const someUser = new Persone('John', 'Snow', 10);
+const userJack = new Persone('Jack', 'Johns', 40);
+const jackJsDev = new Developer('Jack', 'Johns', 40, 'JS');
+const johnGoBEDev = new BEDeveloper('John', 'Johns', 40, 'GO', 'MYSQL');
 
-window.otherSimpleLamp = otherSimpleLamp;
+window.userJack = userJack;
+window.jackJsDev = jackJsDev;
+window.johnGoBEDev = johnGoBEDev;
+
+someUser.say('What\s up dudes!!');
+userJack.say('HELLO!');
+const togler = new LampToggler(document.querySelector('.lamps'));
+const greetBtn = new Button(undefined, 'greet', () => alert('Hello USER!!!'));
+const logInBtn = new RoundButton(undefined, 'Log In', () => prompt('Enter your username'));
+
+window.logInBtn = logInBtn;
+window.greetBtn = greetBtn;
+
 
