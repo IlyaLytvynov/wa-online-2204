@@ -1,0 +1,30 @@
+.traffic-lighter {
+    width: 60px;
+    margin: 0 auto;
+    border: 1px solid grey;
+
+    &__light {
+        border-radius: 50%;
+        border: 1px solid grey;
+        height: 30px;
+        width: 30px;
+        margin: 10px auto;
+        text-align: center;
+        line-height: 30px;
+    }
+}
+
+.traffic-lighter__light_red.active {
+    background-color: red;
+    border-color: red;
+}
+
+.traffic-lighter__light_yellow.active {
+    background-color: yellow;
+    border-color: yellow;
+}
+
+.traffic-lighter__light_green.active {
+    background-color: green;
+    border-color: green;
+}

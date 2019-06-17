@@ -12,11 +12,7 @@ class Button {
         this.btnDomElement = document.createElement('button');
         this.btnDomElement.classList.add('btn');
         this.btnDomElement.textContent = this.title;
-        this.btnDomElement.addEventListener('click', () => {
-            console.log('CLICKED');
-            this.whatToDoWhenUserClick();
-        });
-        console.log('HELLO WORLD');
+        this.btnDomElement.addEventListener('click', () => this.whatToDoWhenUserClick());
         this.target.appendChild(this.btnDomElement);
     }
 }
