@@ -40,5 +40,8 @@
   ],
   "lesson_17": [
     "./src/lesson_17/lesson_17.js"
+  ],
+  "practice_8": [
+    "./src/practice_8/practice_8.js"
   ]
 }
